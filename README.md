@@ -1,8 +1,10 @@
 # Resource-Efficient Neural Network-Based Electrocardiogram Sensor for Atrial Fibrillation Classification and Heart-Rate Extraction
-Kirk A. Sigmon
-Completed as part of coursework at the Thayer School of of Engineering at Dartmouth College
 
-The current working target is the Lab 9 Arduino sketch:
+Kirk A. Sigmon
+
+_Completed as part of coursework at the Thayer School of of Engineering at Dartmouth College_
+
+The current working target:
 
 ```text
 arduino_sketch/arduino_final_sketch.ino
@@ -12,10 +14,10 @@ arduino_sketch/arduino_final_sketch.ino
 
 Assuming that the Arduino CLI and Arduino SAMD board core are already installed:
 
-1. Compile Lab 9:
+1. Compile:
 
    ```bash
-   arduino-cli compile --fqbn arduino:samd:nano_33_iot --libraries common/Arduino/libraries sketches/lab9
+   arduino-cli compile --fqbn arduino:samd:nano_33_iot --libraries common/Arduino/libraries arduino_sketch
    ```
 
 2. Connect the Arduino Nano 33 IoT and find its port:
@@ -27,7 +29,7 @@ Assuming that the Arduino CLI and Arduino SAMD board core are already installed:
 3. Upload Lab 9, replacing `COM8` with your board's port:
 
    ```bash
-   arduino-cli upload -p COM8 --fqbn arduino:samd:nano_33_iot --libraries common/Arduino/libraries sketches/lab9
+   arduino-cli upload -p COM8 --fqbn arduino:samd:nano_33_iot --libraries common/Arduino/libraries arduino_sketch
    ```
 
 ## Build Modes
@@ -52,7 +54,7 @@ arduino-cli compile --fqbn arduino:samd:nano_33_iot --libraries common/Arduino/l
 | --- | --- |
 | `arduino_sketch/` | Latest Arduino sketch and logging scripts/results |
 | `common/Arduino/libraries/ENGG499/` | Project-specific Arduino classifier, ADC, BLE, and signal-processing code |
-| `common/Arduino/libraries/` | Pre-established Arduino dependencies |
+| `common/Arduino/libraries/` | Pre-established Arduino dependencies (some omitted due to size/complexity) |
 | `common/Python/` | Python helper scripts |
 
 ## Optional BLE Logger
